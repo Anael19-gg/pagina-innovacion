@@ -47,10 +47,52 @@
     });
   }
 
-  // Portafolio: impresión o guardado como PDF
+  // Portafolio: guía de impresión y guardado como PDF
   const printButton = document.getElementById("print-portfolio");
+  const printDialog = document.getElementById("print-dialog");
+  const printContinue = document.getElementById("print-continue");
+
+  const closePrintDialog = () => {
+    if (!printDialog) return;
+
+    if (typeof printDialog.close === "function") {
+      printDialog.close();
+    } else {
+      printDialog.removeAttribute("open");
+    }
+  };
+
+  const openPrintDialog = () => {
+    if (!printDialog) return;
+
+    if (typeof printDialog.showModal === "function") {
+      printDialog.showModal();
+    } else {
+      printDialog.setAttribute("open", "");
+    }
+  };
+
   if (printButton) {
-    printButton.addEventListener("click", () => window.print());
+    printButton.addEventListener("click", openPrintDialog);
+  }
+
+  document.querySelectorAll("[data-close-print]").forEach((button) => {
+    button.addEventListener("click", closePrintDialog);
+  });
+
+  if (printContinue) {
+    printContinue.addEventListener("click", () => {
+      closePrintDialog();
+      window.setTimeout(() => window.print(), 80);
+    });
+  }
+
+  if (printDialog) {
+    printDialog.addEventListener("click", (event) => {
+      if (event.target === printDialog) {
+        closePrintDialog();
+      }
+    });
   }
 
   // PWA: instalación desde el navegador

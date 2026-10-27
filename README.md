@@ -75,4 +75,4 @@ Los botones **Instalar aplicación** de la portada y del pie abren la instalaci�
 - El service worker precarga la página, estilos, tipografías e iconos.
 - Las visitas usan red primero y caché como respaldo; los recursos estáticos usan caché con actualización en segundo plano.
 - Si se cambian archivos cacheados, actualiza `CACHE_NAME` en `sw.js` para invalidar la versión anterior.
-- **Imprimir portafolio** abre el diálogo de impresión y aplica una versión clara para papel, con todas las secciones, herramientas y datos del equipo. Se puede guardar como PDF.
+- **Imprimir portafolio** abre una guía rápida y luego el diálogo de impresión. Para guardar el PDF: elige **Guardar como PDF**, desactiva **Encabezados y pies de página**, usa **A4** y escala **100%**. El diseño de impresión ya incluye portada, secciones y datos de entrega.

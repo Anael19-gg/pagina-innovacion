@@ -754,6 +754,57 @@
     </div>
   </dialog>
 
+  <dialog class="install-dialog print-dialog" id="print-dialog" aria-labelledby="print-dialog-title">
+    <div class="install-dialog-head">
+      <div class="install-dialog-brand">
+        <img src="assets/logo-mark-blue.png" width="236" height="118" alt="">
+        <span>Ingeniería Dennis</span>
+      </div>
+      <button class="install-dialog-close" type="button" aria-label="Cerrar instrucciones de impresión" data-close-print>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="install-dialog-body">
+      <p class="label">Guardar como PDF</p>
+      <h2 class="install-dialog-title" id="print-dialog-title">Antes de imprimir.</h2>
+      <p class="install-dialog-lead">Para que el portafolio salga limpio, sin la fecha, la URL ni el título que agrega el navegador, ajusta estas opciones en el diálogo de impresión.</p>
+
+      <ol class="install-steps">
+        <li>
+          <span class="install-step-num">01</span>
+          <div>
+            <h3>Destino</h3>
+            <p>Elige <strong>Guardar como PDF</strong>.</p>
+          </div>
+        </li>
+        <li>
+          <span class="install-step-num">02</span>
+          <div>
+            <h3>Encabezados y pies de página</h3>
+            <p>Desactívalos. Son los que añaden la fecha, la URL y el número de página del navegador.</p>
+          </div>
+        </li>
+        <li>
+          <span class="install-step-num">03</span>
+          <div>
+            <h3>Papel y escala</h3>
+            <p>Usa <strong>A4</strong>, márgenes predeterminados y escala <strong>100%</strong>.</p>
+          </div>
+        </li>
+      </ol>
+
+      <p class="install-dialog-note">En Chrome o Edge, abre <strong>Más ajustes</strong> si no ves estas opciones. El portafolio ya incluye su portada y sus datos de entrega.</p>
+
+      <div class="print-dialog-actions">
+        <button class="install-dialog-action" id="print-continue" type="button">Continuar a imprimir</button>
+        <button class="print-dialog-cancel" type="button" data-close-print>Cancelar</button>
+      </div>
+    </div>
+  </dialog>
+
   <div class="offline-badge" id="offline-badge" role="status" aria-live="polite" hidden>Sin conexión</div>
 
   <script src="js/main.js" defer></script>

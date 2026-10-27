@@ -2850,6 +2850,39 @@ ul {
   background: var(--brand-deep);
 }
 
+.print-dialog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.print-dialog-actions .install-dialog-action {
+  margin-top: 0;
+}
+
+.print-dialog-cancel {
+  min-height: 44px;
+  padding: 11px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--steel);
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    color 0.4s var(--ease),
+    border-color 0.4s var(--ease);
+}
+
+.print-dialog-cancel:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
 @media (max-width: 760px) {
   .hero-actions {
     width: 100%;
@@ -2876,6 +2909,15 @@ ul {
   .install-dialog-action {
     width: 100%;
   }
+
+  .print-dialog-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .print-dialog-cancel {
+    width: 100%;
+  }
 }
 
 .print-cover-meta {
@@ -2888,7 +2930,8 @@ ul {
 
 @media print {
   @page {
-    margin: 16mm;
+    size: A4;
+    margin: 14mm 14mm 16mm;
   }
 
   html,
@@ -2915,12 +2958,13 @@ ul {
   .print-button,
   .footer-brand,
   .footer-actions,
-  .footer-index-link {
+  .footer-index-link,
+  .site-footer {
     display: none !important;
   }
 
   .hero {
-    min-height: 250mm;
+    min-height: 210mm;
     background: #fff !important;
     color: #111 !important;
   }
@@ -2942,6 +2986,7 @@ ul {
     margin-top: auto;
     padding-top: 5mm;
     border-top: 1px solid #111;
+    break-inside: avoid;
   }
 
   .print-cover-meta p {
