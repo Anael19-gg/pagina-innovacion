@@ -47,6 +47,12 @@
     });
   }
 
+  // Portafolio: impresión o guardado como PDF
+  const printButton = document.getElementById("print-portfolio");
+  if (printButton) {
+    printButton.addEventListener("click", () => window.print());
+  }
+
   // PWA: instalación desde el navegador
   const installButton = document.getElementById("install-app");
   let deferredPrompt = null;

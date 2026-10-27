@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "Ingeniería Dennis — Programa iDeas",
-  "short_name": "Dennis iDeas",
-  "description": "Consultoría de ingeniería civil para infraestructura a gran escala en Mexicali. Programa interno de Investigación y Desarrollo iDeas.",
+  "name": "Portafolio de propuestas de valor — Ingeniería Dennis",
+  "short_name": "Dennis 4.1",
+  "description": "Portafolio web colaborativo de la Meta 4.1: organización, grupos de interés, propuestas de valor e innovación organizacional en Ingeniería Dennis.",
   "lang": "es",
   "dir": "ltr",
   "start_url": "./?source=pwa",
@@ -33,10 +33,10 @@
   ],
   "shortcuts": [
     {
-      "name": "Programa iDeas",
+      "name": "Relación con la innovación",
       "short_name": "iDeas",
-      "description": "Conocer el programa interno de Investigación y Desarrollo.",
-      "url": "./#ideas",
+      "description": "Conocer el programa interno de Investigación y Desarrollo y su vínculo con las propuestas de valor.",
+      "url": "./#innovacion",
       "icons": [
         {
           "src": "assets/icon-192.png",

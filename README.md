@@ -1,24 +1,43 @@
 <img src="assets/icon.svg" width="64" height="64" alt="">
 
-# Ingeniería Dennis — Programa iDeas
+# Portafolio de propuestas de valor — Ingeniería Dennis
 
-Sitio informativo de una página para **Ingeniería Dennis**, firma de consultoría de ingeniería civil especializada en proyectos de infraestructura a gran escala en Mexicali.
-
-El sitio presenta la firma, su diagnóstico de innovación y el programa interno de Investigación y Desarrollo **iDeas**. Está construido con HTML, CSS y JavaScript estáticos, y funciona como PWA instalable con soporte fuera de línea.
+Portafolio web colaborativo de la **Meta 4.1** de Gestión de la Innovación: organización, grupos de interés, propuestas de valor y su relación con la innovación. El caso de estudio es **Ingeniería Dennis**, firma de consultoría de ingeniería civil especializada en proyectos de infraestructura a gran escala en Mexicali.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Anael19-gg/pagina-innovacion)
 
-![Vista previa del sitio](assets/og-image.png)
+![Vista previa del portafolio](assets/og-image.png)
+
+## Contenido del portafolio
+
+1. **Organización.** Perfil de la firma, hallazgo principal del diagnóstico y presentación del programa interno de I+D **iDeas**.
+2. **Grupos de interés.** Lista de actores internos y externos, revisión de las cinco familias, matriz poder–interés y tres grupos prioritarios.
+3. **Propuestas de valor.** Resumen de las tres propuestas y expedientes completos: mapas de empatía para los grupos internos y Value Proposition Canvas para los clientes.
+4. **Relación con la innovación.** Cómo iDeas conecta el conocimiento del personal, los recursos de la dirección y la validación de los clientes.
+
+## Revisión de la Meta 4.1
+
+| Criterio | Cobertura |
+| --- | --- |
+| Identificación y priorización de grupos de interés (30%) | Cinco actores, cinco familias revisadas, matriz poder–interés y tres grupos prioritarios (dos internos y uno externo). |
+| Calidad de las propuestas y uso de herramientas (30%) | Tres propuestas de valor; mapas de empatía para los grupos internos y VPC para los clientes. |
+| Vinculación con la innovación organizacional (20%) | Sección 04 con el programa iDeas, los roles del ecosistema y el flujo hallazgo → iDeas → propuestas → innovación continua. |
+| Trabajo colaborativo y presentación (20%) | Sitio navegable, responsive, accesible, instalable como PWA e imprimible como portafolio PDF. |
+
+### Datos por completar antes de entregar
+
+- **Tamaño de la empresa:** aparece como “Por confirmar” en la sección 01; se puede retomar de la Práctica 1.
+- **Integrantes del equipo:** aparece como “Integrantes: por confirmar” en el pie de página y en la portada de impresión.
 
 ## Estructura
 
 ```
-index.html              Página principal
+index.html              Portafolio principal
 offline.html            Respaldo sin conexión para la PWA
 favicon.ico             Icono del navegador
-css/styles.css          Diseño y composición
+css/styles.css          Diseño, componentes y estilos de impresión
 css/fonts.css           Tipografías locales
-js/main.js              Revelados, instalación PWA y estado de conexión
+js/main.js              Revelados, impresión, instalación PWA y estado de conexión
 sw.js                   Service worker
 manifest.webmanifest    Manifiesto de la aplicación
 vercel.json             Encabezados para el despliegue en Vercel
@@ -47,9 +66,9 @@ python -m http.server 4173
 
 Vercel servirá `index.html` en la raíz y los encabezados de `vercel.json` se aplicarán automáticamente.
 
-## PWA
+## PWA e impresión
 
 - El service worker precarga la página, estilos, tipografías e iconos.
 - Las visitas usan red primero y caché como respaldo; los recursos estáticos usan caché con actualización en segundo plano.
 - Si se cambian archivos cacheados, actualiza `CACHE_NAME` en `sw.js` para invalidar la versión anterior.
-- La instalación desde el navegador aparece en el pie de página cuando el navegador la ofrece.
+- **Imprimir portafolio** abre el diálogo de impresión y aplica una versión en blanco y negro con todas las secciones, herramientas y datos del equipo. Se puede guardar como PDF.
