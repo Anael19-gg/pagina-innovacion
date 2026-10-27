@@ -2964,7 +2964,7 @@ ul {
   }
 
   .hero {
-    min-height: 210mm;
+    min-height: 0;
     background: #fff !important;
     color: #111 !important;
   }
@@ -2983,7 +2983,7 @@ ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4mm 10mm;
-    margin-top: auto;
+    margin-top: 12mm;
     padding-top: 5mm;
     border-top: 1px solid #111;
     break-inside: avoid;
@@ -3275,6 +3275,16 @@ ul {
   .program-closing {
     margin-top: 6mm;
     padding-top: 4mm;
+  }
+
+  .js .kicker,
+  .js .hero-title span,
+  .js .hero-lead,
+  .js .hero-foot,
+  .js .hero-mark {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
   }
 
   .js .reveal {
