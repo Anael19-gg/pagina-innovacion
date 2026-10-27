@@ -1,98 +1,241 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestión de la innovación</title>
-  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-  <style>
-    :root {
-      --bg: #f6f7f9;
-      --card: #ffffff;
-      --text: #1f2328;
-      --muted: #656d76;
-      --border: #d8dee4;
-      --accent: #2563eb;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-    }
-    main {
-      width: 100%;
-      max-width: 560px;
-      padding: 32px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-    }
-    h1 {
-      margin: 0 0 8px;
-      font-size: 1.6rem;
-    }
-    p {
-      margin: 0 0 16px;
-      color: var(--muted);
-    }
-    ul {
-      margin: 0 0 24px;
-      padding-left: 20px;
-      color: var(--muted);
-    }
-    li { margin-bottom: 4px; }
-    button {
-      font: inherit;
-      padding: 9px 16px;
-      color: #fff;
-      background: var(--accent);
-      border: 0;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    button:hover { background: #1d4ed8; }
-    #salida {
-      margin: 16px 0 0;
-      padding: 10px 12px;
-      border: 1px dashed var(--border);
-      border-radius: 6px;
-      font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
-      font-size: 0.9rem;
-      color: var(--text);
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ingeniería Dennis — Gestión de la innovación | Programa iDeas</title>
+  <meta name="description" content="Ingeniería Dennis, firma de consultoría de ingeniería civil especializada en proyectos de infraestructura a gran escala en Mexicali. Conoce su diagnóstico de innovación y el programa interno de I+D iDeas.">
+  <meta name="theme-color" content="#171696">
+  <meta name="color-scheme" content="light">
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ingeniería Dennis — Programa iDeas">
+  <meta property="og:description" content="Consultoría de ingeniería civil para infraestructura a gran escala. Un diagnóstico de innovación y el programa interno de I+D iDeas.">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta property="og:locale" content="es_MX">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ingeniería Dennis — Programa iDeas">
+  <meta name="twitter:description" content="Consultoría de ingeniería civil para infraestructura a gran escala. Un diagnóstico de innovación y el programa interno de I+D iDeas.">
+  <meta name="twitter:image" content="assets/og-image.png">
+
+  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
 </head>
 <body>
-  <main>
-    <h1>Gestión de la innovación</h1>
-    <p>Página de prueba sobre gestión de la innovación. Todo está funcionando correctamente y el proyecto renderiza bien.</p>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-    <ul>
-      <li>HTML, CSS y JavaScript en un solo archivo</li>
-      <li>Diseño adaptable a móvil</li>
-      <li>Sin dependencias externas</li>
-    </ul>
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <svg class="hero-arcs" viewBox="0 0 1000 900" fill="none" preserveAspectRatio="xMidYMid slice">
+          <path class="arc arc--soft" d="M-140 840C240 860 540 740 690 410C780 200 920 100 1090 140"/>
+          <path class="arc arc--soft" d="M-120 900C300 915 640 780 800 440C880 250 1000 170 1140 210"/>
+          <path class="arc arc--main" d="M-160 780C230 800 520 660 660 330C740 150 880 50 1050 90"/>
+          <path class="arc arc--mid" d="M-100 700C250 720 500 590 620 280"/>
+          <line class="arc arc--soft" x1="700" y1="0" x2="700" y2="900"/>
+          <line class="arc arc--soft" x1="0" y1="410" x2="1000" y2="410"/>
+          <circle class="hero-node" cx="700" cy="410" r="4"/>
+          <circle class="hero-node hero-node--ring" cx="700" cy="410" r="16"/>
+        </svg>
+        <img class="hero-mark" src="assets/logo-mark-white.svg" width="236" height="118" alt="">
+      </div>
 
-    <button id="boton" type="button">Probar interacción</button>
-    <pre id="salida">Esperando clic…</pre>
+      <div class="hero-shell">
+        <header class="site-header">
+          <a class="brand" href="#inicio">
+            <img class="brand-mark" src="assets/logo-mark-white.svg" width="236" height="118" alt="">
+            <span class="brand-name">Ingeniería Dennis</span>
+          </a>
+          <nav class="site-nav" aria-label="Navegación principal">
+            <a href="#firma">La firma</a>
+            <a href="#innovacion">Innovación</a>
+            <a href="#ideas">Programa iDeas</a>
+          </nav>
+        </header>
+
+        <div class="hero-main">
+          <div class="hero-copy">
+            <p class="kicker">Consultoría de ingeniería civil</p>
+            <h1 class="hero-title">
+              <span>Ingeniería civil</span>
+              <span>para infraestructura</span>
+              <span>a gran escala.</span>
+            </h1>
+            <p class="hero-lead">Ingeniería Dennis es una firma de consultoría de ingeniería civil especializada en proyectos de infraestructura a gran escala, ubicada en Mexicali.</p>
+          </div>
+        </div>
+
+        <div class="hero-foot">
+          <div class="hero-meta">
+            <span>Mexicali</span>
+            <span>Infraestructura a gran escala</span>
+          </div>
+          <a class="hero-link" href="#ideas">
+            <span>Conocer el programa iDeas</span>
+            <span class="hero-link-icon" aria-hidden="true">
+              <svg width="14" height="16" viewBox="0 0 14 16" fill="none">
+                <path d="M7 1v13M2 9l5 5 5-5" stroke="currentColor" stroke-width="1.2"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--firma" id="firma">
+      <div class="container section-grid">
+        <div class="section-rail">
+          <p class="label">La firma</p>
+        </div>
+        <div class="section-content">
+          <h2 class="section-title reveal">Consultoría de ingeniería civil para infraestructura a gran escala.</h2>
+          <p class="section-lede reveal">Ingeniería Dennis es una firma de consultoría de ingeniería civil especializada en proyectos de infraestructura a gran escala, ubicada en Mexicali.</p>
+          <dl class="specs reveal">
+            <div class="spec">
+              <dt>Disciplina</dt>
+              <dd>Ingeniería civil</dd>
+            </div>
+            <div class="spec">
+              <dt>Enfoque</dt>
+              <dd>Infraestructura a gran escala</dd>
+            </div>
+            <div class="spec">
+              <dt>Base</dt>
+              <dd>Mexicali</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--diagnostico" id="innovacion">
+      <div class="container section-grid">
+        <div class="section-rail">
+          <p class="label">Gestión de la innovación</p>
+        </div>
+        <div class="section-content">
+          <h2 class="section-title section-title--large reveal">La digitalización avanza. El modelo de innovación aún no es sistemático.</h2>
+          <p class="section-lede reveal">La empresa invierte activamente en digitalizar su administración y actualizar sus procesos. Su modelo de innovación aún no es sistemático por carecer de un área formal de I+D.</p>
+
+          <div class="diagnosis-grid">
+            <div class="diagnosis-copy reveal">
+              <p>Sus desarrollos tecnológicos responden principalmente a necesidades operativas inmediatas y de cumplimiento normativo, en lugar de obedecer a una estrategia a largo plazo orientada a la disrupción del mercado.</p>
+            </div>
+
+            <div class="status-board reveal">
+              <div class="status-head">
+                <span>Estado actual</span>
+                <span>Innovación</span>
+              </div>
+              <div class="status-row status-row--active">
+                <span class="status-icon" aria-hidden="true"></span>
+                <div>
+                  <p class="status-label">En marcha</p>
+                  <ul>
+                    <li>Digitalización de la administración</li>
+                    <li>Actualización de procesos</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="status-row">
+                <span class="status-icon" aria-hidden="true"></span>
+                <div>
+                  <p class="status-label">Aún pendiente</p>
+                  <ul>
+                    <li>Un modelo de innovación sistemático</li>
+                    <li>Un área formal de I+D</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="program" id="ideas">
+      <svg class="program-arcs" viewBox="0 0 900 800" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+        <path d="M-120 760C220 780 520 650 660 320C740 140 880 40 1050 80" stroke="currentColor" stroke-opacity=".1"/>
+        <path d="M-100 820C280 840 600 700 760 360C840 180 960 100 1100 140" stroke="currentColor" stroke-opacity=".06"/>
+      </svg>
+      <img class="program-mark" src="assets/logo-mark-white.svg" width="236" height="118" alt="" aria-hidden="true">
+
+      <div class="container program-inner">
+        <div class="program-head">
+          <p class="label label--light">Programa interno de I+D</p>
+          <h2 class="program-title reveal">iDeas</h2>
+          <p class="program-lead reveal">Programa interno enfocado en Investigación y Desarrollo, con un canal formal para las propuestas de mejora de todo el personal.</p>
+        </div>
+
+        <div class="program-grid">
+          <div class="program-copy reveal">
+            <p class="program-kicker">El programa</p>
+            <p>iDeas captura las propuestas de mejora de todo el personal, otorgándoles un canal formal para aportar soluciones que transformen la empresa.</p>
+          </div>
+
+          <div class="program-file reveal">
+            <div class="file-head">
+              <span>Ficha del programa</span>
+              <span>I+D</span>
+            </div>
+            <dl>
+              <div class="file-row">
+                <dt>Tipo</dt>
+                <dd>Interno</dd>
+              </div>
+              <div class="file-row">
+                <dt>Enfoque</dt>
+                <dd>Investigación y Desarrollo</dd>
+              </div>
+              <div class="file-row">
+                <dt>Alcance</dt>
+                <dd>Todo el personal</dd>
+              </div>
+              <div class="file-row">
+                <dt>Objetivo</dt>
+                <dd>Capturar las propuestas de mejora del personal.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script>
-    let clics = 0;
-    const boton = document.getElementById("boton");
-    const salida = document.getElementById("salida");
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <a class="footer-brand" href="#inicio" aria-label="Ingeniería Dennis, ir al inicio">
+        <img src="assets/logo-full-white.png" width="236" height="160" alt="Ingeniería Dennis">
+      </a>
 
-    boton.addEventListener("click", () => {
-      clics++;
-      salida.textContent = "Clic registrado: " + clics + (clics === 1 ? " vez" : " veces");
-    });
-  </script>
+      <div class="footer-block">
+        <p class="label label--light">La firma</p>
+        <p>Consultoría de ingeniería civil<br>Mexicali</p>
+      </div>
+
+      <div class="footer-block">
+        <p class="label label--light">Programa</p>
+        <p>iDeas<br>Investigación y Desarrollo interno</p>
+      </div>
+
+      <div class="footer-end">
+        <button class="install-button" id="install-app" type="button" hidden>Instalar aplicación</button>
+        <p class="copyright">© <span id="year">2026</span> Ingeniería Dennis</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="offline-badge" id="offline-badge" role="status" aria-live="polite" hidden>Sin conexión</div>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>

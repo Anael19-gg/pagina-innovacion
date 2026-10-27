@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sin conexión — Ingeniería Dennis</title>
+  <meta name="theme-color" content="#171696">
+  <meta name="robots" content="noindex">
+  <style>
+    :root {
+      --brand: #171696;
+      --brand-soft: #c3c5ff;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      min-height: 100svh;
+      margin: 0;
+      padding: 24px;
+      overflow: hidden;
+      background: var(--brand);
+      color: var(--white);
+      font-family: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(120% 95% at 88% 8%, rgba(92, 89, 255, 0.4), transparent 58%),
+        radial-gradient(95% 85% at 4% 105%, rgba(2, 2, 36, 0.62), transparent 62%);
+    }
+    .arcs {
+      position: absolute;
+      top: 0;
+      right: -20%;
+      width: 80%;
+      height: 100%;
+      opacity: 0.55;
+      pointer-events: none;
+    }
+    .arcs path {
+      fill: none;
+      stroke: var(--white);
+      stroke-width: 1;
+      vector-effect: non-scaling-stroke;
+    }
+    main {
+      position: relative;
+      z-index: 1;
+      width: min(560px, 100%);
+    }
+    .logo {
+      width: 210px;
+      height: auto;
+      margin-bottom: clamp(40px, 8vh, 64px);
+    }
+    .label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--brand-soft);
+      font-family: "IBM Plex Mono", "Courier New", monospace;
+      font-size: 11px;
+      letter-spacing: 0.03em;
+      line-height: 1.4;
+    }
+    .label::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: currentColor;
+    }
+    h1 {
+      margin: 22px 0 0;
+      font-family: "Archivo", "Segoe UI", sans-serif;
+      font-size: clamp(3rem, 8vw, 4.8rem);
+      font-weight: 500;
+      letter-spacing: -0.045em;
+      line-height: 0.95;
+    }
+    main > p {
+      max-width: 44ch;
+      margin: 22px 0 0;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 17px;
+      line-height: 1.6;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 22px;
+      margin-top: 36px;
+    }
+    button,
+    .actions a {
+      font: inherit;
+      font-size: 14px;
+    }
+    button {
+      padding: 12px 20px;
+      border: 1px solid var(--white);
+      background: var(--white);
+      color: var(--brand);
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    button:hover {
+      background: transparent;
+      color: var(--white);
+    }
+    .actions a {
+      padding-bottom: 2px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+      color: var(--white);
+      text-decoration: none;
+    }
+    .actions a:hover {
+      border-bottom-color: var(--white);
+    }
+    :focus-visible {
+      outline: 2px solid var(--white);
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+<body>
+  <svg class="arcs" viewBox="0 0 1000 900" fill="none" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path d="M-140 840C240 860 540 740 690 410C780 200 920 100 1090 140"/>
+    <path d="M-120 900C300 915 640 780 800 440C880 250 1000 170 1140 210"/>
+    <path d="M-160 780C230 800 520 660 660 330C740 150 880 50 1050 90" opacity=".65"/>
+  </svg>
+
+  <main>
+    <img class="logo" src="assets/logo-full-white.png" width="236" height="160" alt="Ingeniería Dennis">
+    <p class="label">Ingeniería Dennis</p>
+    <h1>Sin conexión.</h1>
+    <p>No pudimos cargar esta página. Revisa tu conexión e inténtalo de nuevo. Si ya visitaste el sitio, la página de inicio puede estar disponible sin conexión.</p>
+    <div class="actions">
+      <button type="button" onclick="location.reload()">Reintentar</button>
+      <a href="./">Volver al inicio</a>
+    </div>
+  </main>
+</body>
+</html>
