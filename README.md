@@ -71,4 +71,4 @@ Vercel servirá `index.html` en la raíz y los encabezados de `vercel.json` se a
 - El service worker precarga la página, estilos, tipografías e iconos.
 - Las visitas usan red primero y caché como respaldo; los recursos estáticos usan caché con actualización en segundo plano.
 - Si se cambian archivos cacheados, actualiza `CACHE_NAME` en `sw.js` para invalidar la versión anterior.
-- **Imprimir portafolio** abre el diálogo de impresión y aplica una versión en blanco y negro con todas las secciones, herramientas y datos del equipo. Se puede guardar como PDF.
+- **Imprimir portafolio** abre el diálogo de impresión y aplica una versión clara para papel, con todas las secciones, herramientas y datos del equipo. Se puede guardar como PDF.
