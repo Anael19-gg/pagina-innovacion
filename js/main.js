@@ -54,32 +54,86 @@
   }
 
   // PWA: instalación desde el navegador
-  const installButton = document.getElementById("install-app");
+  const installTriggers = document.querySelectorAll("[data-install-trigger]");
+  const installDialog = document.getElementById("install-dialog");
   let deferredPrompt = null;
+
+  const isStandalone = () =>
+    window.matchMedia("(display-mode: standalone)").matches ||
+    window.navigator.standalone === true;
+
+  const hideInstallTriggers = () => {
+    installTriggers.forEach((button) => {
+      button.hidden = true;
+    });
+  };
+
+  const closeInstallDialog = () => {
+    if (!installDialog) return;
+
+    if (typeof installDialog.close === "function") {
+      installDialog.close();
+    } else {
+      installDialog.removeAttribute("open");
+    }
+  };
+
+  const openInstallDialog = () => {
+    if (!installDialog) return;
+
+    if (typeof installDialog.showModal === "function") {
+      installDialog.showModal();
+    } else {
+      installDialog.setAttribute("open", "");
+    }
+  };
+
+  if (isStandalone()) {
+    hideInstallTriggers();
+  }
 
   window.addEventListener("beforeinstallprompt", (event) => {
     event.preventDefault();
     deferredPrompt = event;
-    if (installButton) installButton.hidden = false;
   });
 
-  if (installButton) {
-    installButton.addEventListener("click", async () => {
-      if (!deferredPrompt) return;
+  installTriggers.forEach((button) => {
+    button.addEventListener("click", async () => {
+      if (isStandalone()) {
+        hideInstallTriggers();
+        return;
+      }
+
+      if (!deferredPrompt) {
+        openInstallDialog();
+        return;
+      }
 
       deferredPrompt.prompt();
       const choice = await deferredPrompt.userChoice;
+      deferredPrompt = null;
 
       if (choice.outcome === "accepted") {
-        installButton.hidden = true;
+        hideInstallTriggers();
       }
+    });
+  });
 
-      deferredPrompt = null;
+  document.querySelectorAll("[data-close-install]").forEach((button) => {
+    button.addEventListener("click", closeInstallDialog);
+  });
+
+  if (installDialog) {
+    installDialog.addEventListener("click", (event) => {
+      if (event.target === installDialog) {
+        closeInstallDialog();
+      }
     });
   }
 
   window.addEventListener("appinstalled", () => {
-    if (installButton) installButton.hidden = true;
+    hideInstallTriggers();
+    closeInstallDialog();
     deferredPrompt = null;
   });
 

@@ -1,6 +1,6 @@
 /* Service worker — Ingeniería Dennis / Programa iDeas */
 
-const CACHE_NAME = "dennis-portafolio-v3";
+const CACHE_NAME = "dennis-portafolio-v4";
 
 const PRECACHE = [
   "./",
@@ -12,6 +12,7 @@ const PRECACHE = [
   "./favicon.ico",
   "./assets/logo-full-white.png",
   "./assets/logo-mark-white.svg",
+  "./assets/logo-mark-blue.png",
   "./assets/icon-192.png",
   "./assets/icon-512.png",
   "./assets/icon-maskable-512.png",

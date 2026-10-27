@@ -24,10 +24,10 @@ Portafolio web colaborativo de la **Meta 4.1** de Gestión de la Innovación: or
 | Vinculación con la innovación organizacional (20%) | Sección 04 con el programa iDeas, los roles del ecosistema y el flujo hallazgo → iDeas → propuestas → innovación continua. |
 | Trabajo colaborativo y presentación (20%) | Sitio navegable, responsive, accesible, instalable como PWA e imprimible como portafolio PDF. |
 
-### Datos por completar antes de entregar
+### Datos de la entrega
 
-- **Tamaño de la empresa:** aparece como “Por confirmar” en la sección 01; se puede retomar de la Práctica 1.
-- **Integrantes del equipo:** aparece como “Integrantes: por confirmar” en el pie de página y en la portada de impresión.
+- **Tamaño:** Pequeña empresa.
+- **Integrantes:** Anael Ramos Morales, Pablo Alejandro Prado Pimentel y Melany Tapia Morales.
 
 ## Estructura
 
@@ -65,6 +65,10 @@ python -m http.server 4173
 3. Deja vacío el comando de compilación y usa la raíz del proyecto como directorio de salida.
 
 Vercel servirá `index.html` en la raíz y los encabezados de `vercel.json` se aplicarán automáticamente.
+
+## Instalar la PWA
+
+Los botones **Instalar aplicación** de la portada y del pie abren la instalación nativa cuando el navegador la ofrece. Si no está disponible —por ejemplo, en iPhone o iPad— muestran una guía con los pasos para Chrome, Edge, Android e iOS. La aplicación queda instalada con el nombre **Dennis 4.1**.
 
 ## PWA e impresión
 

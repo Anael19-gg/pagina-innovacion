@@ -100,21 +100,29 @@
             <span>Mexicali</span>
             <span>Meta 4.1</span>
           </div>
-          <a class="hero-link" href="#indice">
-            <span>Explorar el portafolio</span>
-            <span class="hero-link-icon" aria-hidden="true">
-              <svg width="14" height="16" viewBox="0 0 14 16" fill="none">
-                <path d="M7 1v13M2 9l5 5 5-5" stroke="currentColor" stroke-width="1.2"/>
+          <div class="hero-actions">
+            <a class="hero-link" href="#indice">
+              <span>Explorar el portafolio</span>
+              <span class="hero-link-icon" aria-hidden="true">
+                <svg width="14" height="16" viewBox="0 0 14 16" fill="none">
+                  <path d="M7 1v13M2 9l5 5 5-5" stroke="currentColor" stroke-width="1.2"/>
+                </svg>
+              </span>
+            </a>
+            <button class="install-cta" type="button" data-install-trigger>
+              <svg width="15" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.2"/>
               </svg>
-            </span>
-          </a>
+              <span>Instalar aplicación</span>
+            </button>
+          </div>
         </div>
 
         <div class="print-cover-meta">
           <p><span>Organización</span> Ingeniería Dennis</p>
           <p><span>Portafolio</span> Gestión de la Innovación · Meta 4.1</p>
           <p><span>Plataforma</span> Sitio web</p>
-          <p><span>Integrantes</span> Por confirmar</p>
+          <p><span>Integrantes</span> Anael Ramos Morales<br>Pablo Alejandro Prado Pimentel<br>Melany Tapia Morales</p>
         </div>
       </div>
     </section>
@@ -176,7 +184,7 @@
             </div>
             <div class="spec">
               <dt>Tamaño</dt>
-              <dd class="is-pending">Por confirmar</dd>
+              <dd>Pequeña empresa</dd>
             </div>
           </dl>
 
@@ -689,15 +697,62 @@
 
       <div class="footer-end">
         <p class="label label--light">Equipo</p>
-        <p class="footer-team">Integrantes: por confirmar</p>
+        <p class="footer-team">Anael Ramos Morales<br>Pablo Alejandro Prado Pimentel<br>Melany Tapia Morales</p>
         <div class="footer-actions">
           <button class="print-button" id="print-portfolio" type="button">Imprimir portafolio</button>
-          <button class="install-button" id="install-app" type="button" hidden>Instalar aplicación</button>
+          <button class="install-button" id="install-app" type="button" data-install-trigger>Instalar aplicación</button>
         </div>
         <p class="copyright">© <span id="year">2026</span> Ingeniería Dennis</p>
       </div>
     </div>
   </footer>
+
+  <dialog class="install-dialog" id="install-dialog" aria-labelledby="install-dialog-title">
+    <div class="install-dialog-head">
+      <div class="install-dialog-brand">
+        <img src="assets/logo-mark-blue.png" width="236" height="118" alt="">
+        <span>Ingeniería Dennis</span>
+      </div>
+      <button class="install-dialog-close" type="button" aria-label="Cerrar instrucciones de instalación" data-close-install>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="install-dialog-body">
+      <p class="label">Aplicación web</p>
+      <h2 class="install-dialog-title" id="install-dialog-title">Lleva el portafolio contigo.</h2>
+      <p class="install-dialog-lead">Instálalo como aplicación y consulta el contenido sin conexión después de la primera visita.</p>
+
+      <ol class="install-steps">
+        <li>
+          <span class="install-step-num">01</span>
+          <div>
+            <h3>Chrome o Edge en computadora</h3>
+            <p>Abre el menú del navegador y elige <strong>Instalar aplicación</strong>.</p>
+          </div>
+        </li>
+        <li>
+          <span class="install-step-num">02</span>
+          <div>
+            <h3>Android</h3>
+            <p>Abre el menú de Chrome y elige <strong>Instalar aplicación</strong> o <strong>Añadir a pantalla de inicio</strong>.</p>
+          </div>
+        </li>
+        <li>
+          <span class="install-step-num">03</span>
+          <div>
+            <h3>iPhone o iPad</h3>
+            <p>Toca <strong>Compartir</strong> y luego <strong>Añadir a pantalla de inicio</strong>.</p>
+          </div>
+        </li>
+      </ol>
+
+      <p class="install-dialog-note">Si el navegador muestra un aviso de instalación, acéptalo para completar el proceso.</p>
+      <button class="install-dialog-action" type="button" data-close-install>Entendido</button>
+    </div>
+  </dialog>
 
   <div class="offline-badge" id="offline-badge" role="status" aria-live="polite" hidden>Sin conexión</div>
 
