@@ -80,12 +80,22 @@
     button.addEventListener("click", closePrintDialog);
   });
 
+  // Los detalles abiertos también forman parte del PDF del portafolio.
+  const openPrintDetails = () => {
+    document.querySelectorAll("details").forEach((details) => {
+      details.open = true;
+    });
+  };
+
   if (printContinue) {
     printContinue.addEventListener("click", () => {
+      openPrintDetails();
       closePrintDialog();
       window.setTimeout(() => window.print(), 80);
     });
   }
+
+  window.addEventListener("beforeprint", openPrintDetails);
 
   if (printDialog) {
     printDialog.addEventListener("click", (event) => {
