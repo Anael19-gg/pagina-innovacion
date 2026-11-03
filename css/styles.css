@@ -2806,6 +2806,16 @@ ul {
   color: var(--signal-good);
 }
 
+.shift-levels {
+  display: block;
+  margin-top: 4px;
+  color: var(--steel);
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
 .improvement-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -3014,9 +3024,10 @@ ul {
 
   .improvement-shift {
     grid-column: 2;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: baseline;
+    gap: 4px 10px;
     min-width: 0;
     padding-top: 10px;
     padding-left: 0;
@@ -3026,7 +3037,17 @@ ul {
   }
 
   .shift-label {
+    grid-column: 1 / -1;
     margin-bottom: 0;
+  }
+
+  .shift-values {
+    grid-column: 1;
+  }
+
+  .shift-levels {
+    grid-column: 2;
+    margin-top: 0;
   }
 
   .improvement-grid {
@@ -4113,6 +4134,31 @@ ul {
 
   .scorecard-reading {
     margin-top: 2mm;
+  }
+
+  .improvement-list {
+    margin-top: 5mm;
+  }
+
+  .improvement {
+    padding-block: 4mm;
+  }
+
+  .improvement-vp {
+    margin-top: 2mm;
+  }
+
+  .improvement-grid {
+    margin-top: 3mm;
+  }
+
+  .improvement-grid > div {
+    padding-block: 2mm;
+  }
+
+  .eval-close {
+    margin-top: 5mm;
+    padding-top: 3mm;
   }
 
   p {

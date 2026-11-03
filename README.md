@@ -32,7 +32,7 @@ Portafolio web colaborativo de las **Metas 4.1 y 4.2** de Gestión de la Innovac
 
 | Criterio | Cobertura |
 | --- | --- |
-| Evaluación fundamentada de la vinculación por grupo de interés (40%) | Tres grupos prioritarios, cuatro dimensiones calificadas de 1 a 3, una línea de evidencia por calificación y total por grupo: 5/12, 8/12 y 6/12. |
+| Evaluación fundamentada de la vinculación por grupo de interés (40%) | Tres grupos prioritarios, cuatro dimensiones calificadas de 1 a 3, una línea de evidencia por calificación y total por grupo: 9/12, 6/12 y 7/12. |
 | Identificación de fortalezas, áreas de oportunidad y propuestas de mejora (35%) | Dos fortalezas y dos áreas de oportunidad con referencia a la dimensión y calificación; tres propuestas de mejora con qué haremos, con quién, primer paso, dimensión de → a y relación con la innovación. |
 | Trabajo colaborativo, presentación y oportunidad (25%) | Sitio navegable, responsive, accesible, instalable como PWA e imprimible como portafolio PDF; método y escala explícitos; enlace listo para el buzón. |
 
@@ -50,7 +50,8 @@ Portafolio web colaborativo de las **Metas 4.1 y 4.2** de Gestión de la Innovac
 
 - Se evalúa la relación actual, no la que tendrían con las propuestas de mejora.
 - Se usan los mismos tres grupos prioritarios de la semana 9 y su propuesta de valor.
-- Los totales (5/12, 8/12 y 6/12) solo sirven para comparar grupos.
+- Los totales (9/12, 6/12 y 7/12) solo sirven para comparar grupos.
+- El total del Grupo 2 se corrigió a 6/12: la suma de sus cuatro calificaciones (1+1+2+2) da 6, no 8.
 - Las propuestas usan puestos, no nombres de personas, y un primer paso ejecutable la próxima semana.
 - Las mejoras son de bajo costo y quedan dentro de lo que puede decidir la gerencia.
 
