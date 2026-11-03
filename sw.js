@@ -1,6 +1,6 @@
 /* Service worker — Ingeniería Dennis / Programa iDeas */
 
-const CACHE_NAME = "dennis-portafolio-v9";
+const CACHE_NAME = "dennis-portafolio-v10";
 
 const PRECACHE = [
   "./",

@@ -178,7 +178,7 @@
           <p class="label">Organización</p>
         </div>
         <div class="section-content">
-          <h2 class="section-title reveal">Ingeniería Dennis, consultoría de ingeniería civil a gran escala.</h2>
+          <h2 class="section-title reveal"><span class="section-title-inner">Ingeniería Dennis, consultoría de ingeniería civil a gran escala.</span></h2>
           <p class="section-lede reveal">Ingeniería Dennis es una firma de consultoría de ingeniería civil especializada en proyectos de infraestructura a gran escala, ubicada en Mexicali.</p>
 
           <dl class="specs specs--org reveal">
@@ -267,7 +267,7 @@
           <p class="label">Grupos de interés</p>
         </div>
         <div class="section-content">
-          <h2 class="section-title reveal">Quiénes participan en la innovación de Ingeniería Dennis.</h2>
+          <h2 class="section-title reveal"><span class="section-title-inner">Quiénes participan en la innovación de Ingeniería Dennis.</span></h2>
           <p class="section-lede reveal">La lista revisa las cinco familias del modelo y ubica a cada actor dentro o fuera de la organización según su papel en la innovación.</p>
 
           <div class="table-wrap reveal">
@@ -436,7 +436,7 @@
           <p class="label">Propuestas de valor</p>
         </div>
         <div class="section-content">
-          <h2 class="section-title reveal">Una propuesta de valor para cada grupo prioritario.</h2>
+          <h2 class="section-title reveal"><span class="section-title-inner">Una propuesta de valor para cada grupo prioritario.</span></h2>
           <p class="section-lede reveal">La herramienta se elige según el rol del grupo: mapa de empatía para los internos y Value Proposition Canvas para los clientes que reciben el servicio.</p>
 
           <ol class="vp-summary reveal">
@@ -704,7 +704,7 @@
                 <span>Actividad colaborativa</span>
                 <span>Valor 10%</span>
               </p>
-              <h2 class="section-title reveal">La relación con los grupos de interés, medida con evidencia.</h2>
+              <h2 class="section-title reveal"><span class="section-title-inner">La relación con los grupos de interés, medida con evidencia.</span></h2>
               <p class="section-lede reveal">Evaluamos la relación de hoy con los mismos tres grupos prioritarios de la semana 9. Cada grupo se califica de 1 a 3 en cuatro dimensiones y cada calificación se sostiene con una evidencia concreta. El total compara grupos; no sustituye el análisis.</p>
             </div>
 
@@ -727,37 +727,69 @@
             </aside>
           </div>
 
-          <div class="score-overview reveal">
-            <div class="score-overview-head">
-              <p class="label">Lectura comparada</p>
-              <p class="score-overview-note">Suma de las cuatro dimensiones · máximo 12</p>
+          <div class="eval-board reveal">
+            <div class="eval-board-head">
+              <p class="label label--light">Lectura comparada</p>
+              <p class="eval-board-note">Perfil de cada grupo en las cuatro dimensiones · máximo 3 por eje</p>
             </div>
-            <ul class="score-bars">
-              <li class="score-bar">
-                <div class="score-bar-head">
-                  <span class="score-bar-name">Personal operativo e ingenieros</span>
-                  <span class="score-bar-value">9<span>/12</span></span>
-                </div>
-                <div class="score-bar-track" aria-hidden="true"><span style="--score: 9"></span></div>
-                <p class="score-bar-note">La relación más sólida: alta interacción diaria, pero sin un canal formal que documente las mejoras.</p>
-              </li>
-              <li class="score-bar">
-                <div class="score-bar-head">
-                  <span class="score-bar-name">Dirección General y Gerencias</span>
-                  <span class="score-bar-value">6<span>/12</span></span>
-                </div>
-                <div class="score-bar-track" aria-hidden="true"><span style="--score: 6"></span></div>
-                <p class="score-bar-note">La relación más débil: autoriza presupuestos aislados y su interacción con la innovación es esporádica.</p>
-              </li>
-              <li class="score-bar">
-                <div class="score-bar-head">
-                  <span class="score-bar-name">Clientes de infraestructura</span>
-                  <span class="score-bar-value">7<span>/12</span></span>
-                </div>
-                <div class="score-bar-track" aria-hidden="true"><span style="--score: 7"></span></div>
-                <p class="score-bar-note">Relación transaccional y periódica: hay contacto, pero el valor se demuestra al final de la obra.</p>
-              </li>
-            </ul>
+
+            <div class="eval-board-grid">
+              <div class="radar-frame">
+                <span class="radar-axis radar-axis--top">Tipo de relación</span>
+                <span class="radar-axis radar-axis--right">Nivel de interacción</span>
+                <span class="radar-axis radar-axis--bottom">Beneficios mutuos</span>
+                <span class="radar-axis radar-axis--left">Impacto en la innovación</span>
+
+                <svg class="radar-svg" viewBox="0 0 400 400" role="img" aria-label="Perfil comparado de los tres grupos prioritarios. Personal operativo: tipo de relación 2, nivel de interacción 3, beneficios mutuos 2, impacto en la innovación 2. Dirección General: 1, 1, 2, 2. Clientes de infraestructura: 1, 2, 2, 2.">
+                  <g class="radar-grid" aria-hidden="true">
+                    <polygon points="200,156.67 243.33,200 200,243.33 156.67,200" />
+                    <polygon points="200,113.33 286.67,200 200,286.67 113.33,200" />
+                    <polygon points="200,70 330,200 200,330 70,200" />
+                  </g>
+                  <g class="radar-axes" aria-hidden="true">
+                    <line x1="200" y1="200" x2="200" y2="70" />
+                    <line x1="200" y1="200" x2="330" y2="200" />
+                    <line x1="200" y1="200" x2="200" y2="330" />
+                    <line x1="200" y1="200" x2="70" y2="200" />
+                  </g>
+                  <g class="radar-series" aria-hidden="true">
+                    <polygon class="radar-shape radar-shape--personal" points="200,113.33 330,200 200,286.67 113.33,200" pathLength="100" />
+                    <polygon class="radar-shape radar-shape--direction" points="200,156.67 243.33,200 200,286.67 113.33,200" pathLength="100" />
+                    <polygon class="radar-shape radar-shape--clients" points="200,156.67 286.67,200 200,286.67 113.33,200" pathLength="100" />
+                  </g>
+                  <circle class="radar-center" cx="200" cy="200" r="2.5" aria-hidden="true" />
+                </svg>
+              </div>
+
+              <div class="radar-legend">
+                <article class="radar-item radar-item--personal">
+                  <header class="radar-item-head">
+                    <span class="radar-swatch" aria-hidden="true"></span>
+                    <h4>Personal operativo e ingenieros</h4>
+                    <span class="radar-total">9<span>/12</span></span>
+                  </header>
+                  <p>La relación más sólida: alta interacción diaria, pero sin un canal formal que documente las mejoras.</p>
+                </article>
+
+                <article class="radar-item radar-item--direction">
+                  <header class="radar-item-head">
+                    <span class="radar-swatch" aria-hidden="true"></span>
+                    <h4>Dirección General y Gerencias</h4>
+                    <span class="radar-total">6<span>/12</span></span>
+                  </header>
+                  <p>La relación más débil: autoriza presupuestos aislados y su interacción con la innovación es esporádica.</p>
+                </article>
+
+                <article class="radar-item radar-item--clients">
+                  <header class="radar-item-head">
+                    <span class="radar-swatch" aria-hidden="true"></span>
+                    <h4>Clientes de infraestructura</h4>
+                    <span class="radar-total">7<span>/12</span></span>
+                  </header>
+                  <p>Relación transaccional y periódica: hay contacto, pero el valor se demuestra al final de la obra.</p>
+                </article>
+              </div>
+            </div>
           </div>
 
           <details class="scale-details reveal">
@@ -1071,7 +1103,7 @@
                 <dl class="improvement-grid">
                   <div>
                     <dt>Qué haremos</dt>
-                    <dd>Crear un comité breve para evaluar el Retorno de Inversión (ROI) y ahorros de las ideas operativas.</dd>
+                    <dd>Crear un comité breve para evaluar el Retorno sobre la Inversión (ROI) y ahorros de las ideas operativas.</dd>
                   </div>
                   <div>
                     <dt>Con quién</dt>
@@ -1083,7 +1115,7 @@
                   </div>
                   <div>
                     <dt>Relación con la innovación</dt>
-                    <dd>Convierte a la dirección en patrocinadores activos, apoyando la innovación como estrategia a largo plazo.</dd>
+                    <dd>Convierte a la dirección y las gerencias en patrocinadores activos, apoyando la innovación como estrategia a largo plazo.</dd>
                   </div>
                 </dl>
               </li>
@@ -1112,7 +1144,7 @@
                   </div>
                   <div>
                     <dt>Primer paso</dt>
-                    <dd>Añadir una diapositiva visual con los ahorros y mitigación de riesgos logrados al próximo reporte de avance.</dd>
+                    <dd>Añadir una diapositiva visual con los ahorros y la mitigación de riesgos logrados al próximo reporte de avance.</dd>
                   </div>
                   <div>
                     <dt>Relación con la innovación</dt>
@@ -1149,6 +1181,11 @@
   </main>
 
   <footer class="site-footer">
+    <div class="container footer-statement">
+      <p class="label label--light">Cierre del portafolio</p>
+      <p class="footer-statement-text">La innovación se demuestra con evidencia: se mide, se documenta y se comparte.</p>
+    </div>
+
     <div class="container footer-grid">
       <a class="footer-brand" href="#inicio" aria-label="Ingeniería Dennis, ir al inicio">
         <img src="assets/logo-full-white.png" width="236" height="160" alt="Ingeniería Dennis">
