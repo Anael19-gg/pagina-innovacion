@@ -2362,6 +2362,13 @@ ul {
 
 /* Radar */
 
+.radar-visual {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  width: 100%;
+}
+
 .radar-frame {
   display: grid;
   grid-template-columns: 58px minmax(0, 1fr) 58px;
@@ -2370,6 +2377,14 @@ ul {
   width: 100%;
   max-width: 520px;
   margin-inline: auto;
+}
+
+.radar-note {
+  max-width: 520px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .radar-svg {
@@ -4407,6 +4422,7 @@ ul {
   .eval-board .label--light,
   .eval-board-note,
   .radar-axis,
+  .radar-note,
   .radar-item p,
   .radar-total span {
     color: #555 !important;
